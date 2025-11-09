@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header h1 {
+  color: #ff2d6d;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 15px 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.transaction:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(255, 45, 109, 0.3);
+}
+
+.transaction .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction .name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.transaction .date {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.transaction .amount {
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.income .amount {
+  color: #00ff7f;
+}
+
+.expense .amount {
+  color: #ff4c4c;
+}
+
+.details {
+  background-color: #ff2d6d;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details:hover {
+  background-color: #ff4c85;
+}
+
+@media (max-width: 600px) {
+  .transaction {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .transaction .amount {
+    margin: 10px 0;
+  }
+
+  .details {
+    align-self: flex-end;
+  }
+}
