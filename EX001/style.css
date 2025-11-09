@@ -2,6 +2,7 @@
     --rosa-carmin: #ff2d6d;
     --branco: #FFFFFF;
     --roxo: #6c5ce7;
+    --preto: #0f172a;
 }
 html, body{
     height: 100%;
@@ -21,16 +22,23 @@ body {
     width: 320px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
+/* centraliza os campos dentro do form da card */
+.card form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centraliza horizontalmente os inputs */
+    justify-content: center; /* opcional: centra verticalmente se a form tiver altura */
+}
 .card input {
-    width: 100%;
+    width: 80%; /* reduz a largura para ficar centralizado na card */
     padding: 10px;
-    margin: 8px;
+    margin: 8px 0; /* margem vertical; horizontal é controlada pelo alinhamento do form */
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 14px;
 }
 .card button {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     border: 0;
     border-radius: 5px;
@@ -38,4 +46,21 @@ body {
     background: var(--roxo);
     color: var(--branco);
     cursor: pointer;
+}
+.card h2 {
+    margin: 0px 0px 15px 0px;
+    font-size:30px;
+    color: var(--preto);
+}
+.card input:focus {
+    outline: none;
+    border-color: #2d9cdb;
+    box-shadow: 0 6px 18px rgba(45,156,219,0.12);
+}
+.card input::placeholder {
+    color:#999;
+}
+.card button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(108,92,231,0.16);
 }
